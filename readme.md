@@ -59,6 +59,6 @@ still in the learning stages of the 3 listed above.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@manku92](https://www.frontendmentor.io/profile/yourusername)
 
 
