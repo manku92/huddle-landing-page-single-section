@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@import 'mobile';
+
+$primary-colors: (
+  Violet: hsl(257, 40%, 49%),
+  Soft-Magenta: hsl(300, 69%, 71%),
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background-color: map-get($primary-colors, Violet);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+h1 {
+  font-family: 'Poppings';
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+
+// MAIN
+#huddle-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+}
+
+// CONTAINER > CONTENT
+.huddle-content {
+  padding: 2rem;
+
+  h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+
+  p {
+    padding-top: 1.5rem;
+    line-height: 1.7;
+    font-size: 0.9rem;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    color: map-get($primary-colors, Violet);
+    width: 40%;
+    margin-top: 15px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background-color: map-get($primary-colors, Soft-Magenta);
+    color: white;
+  }
+
+}
+
+// SOCIALS
+.social-icons {
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  li {
+    margin-right: 20px;
+    position: relative;
+    font-size: 14px;
+
+  }
+
+  li:before {
+    content: ' ';
+    position: absolute;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: -5px;
+    right: -7px;
+  }
+
+  li:hover::before {
+    cursor: pointer;
+    border: 1px solid map-get($primary-colors, Soft-Magenta);
+  }
+
+  a {
+    color: white;
+  }
+
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.attribution a {
+  color: hsl(231, 100%, 99%);
+}
+
+// Breakpoint 768px
+@media (max-width: 768px) {
+
+  body {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  #huddle-container {
+    flex-direction: column;
+  }
+
+  .huddle-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1,
+    p {
+      text-align: center
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    a {
+      width: 30%;
+    }
+  }
+
+  .social-icons {
+    ul {
+      justify-content: center;
+    }
+  }
+  .attribution {
+    font-size: 1rem;
+  }
+
+}
+
+// Breakpoint 425px
+@media (max-width: 425px) {
+
+  .huddle-content {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}

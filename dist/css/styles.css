@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: hsl(257deg, 40%, 49%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-family: "Poppings";
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#huddle-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.huddle-content {
+  padding: 2rem;
+}
+.huddle-content h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.huddle-content p {
+  padding-top: 1.5rem;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+.huddle-content a {
+  display: block;
+  text-decoration: none;
+  background-color: white;
+  color: hsl(257deg, 40%, 49%);
+  width: 40%;
+  margin-top: 15px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 30px;
+}
+.huddle-content a:hover {
+  cursor: pointer;
+  background-color: hsl(300deg, 69%, 71%);
+  color: white;
+}
+
+.social-icons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.social-icons li {
+  margin-right: 20px;
+  position: relative;
+  font-size: 14px;
+}
+.social-icons li:before {
+  content: " ";
+  position: absolute;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  bottom: -5px;
+  right: -7px;
+}
+.social-icons li:hover::before {
+  cursor: pointer;
+  border: 1px solid hsl(300deg, 69%, 71%);
+}
+.social-icons a {
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.attribution a {
+  color: hsl(231deg, 100%, 99%);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  #huddle-container {
+    flex-direction: column;
+  }
+  .huddle-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .huddle-content h1,
+  .huddle-content p {
+    text-align: center;
+  }
+  .huddle-content p {
+    font-size: 1rem;
+  }
+  .huddle-content a {
+    width: 30%;
+  }
+  .social-icons ul {
+    justify-content: center;
+  }
+  .attribution {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .huddle-content h1 {
+    font-size: 1.8rem;
+  }
+  .huddle-content a {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
